@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Age to see movie</h2>
+
+<p>Please input your age</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+ var x, text;
+
+ // Get the value of the input field with id="numb"
+ x = document.getElementById("numb").value;
+
+ // If x is Not a Number or less than one or greater than 99
+ if (isNaN(x) || x < 17 || x > 99 || x < 13) {
+   text = "You can see PG-13 rated movies alone<br><br> If under the age of 13 you can see G and PG movies alone";
+ } else {
+   text = "You can see R rated movies alone";
+ }
+ document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
